@@ -1,0 +1,13 @@
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.buttonText {
+  color: rgba(20, 121, 236, 0.918);
+  font-size: 16px;
+}

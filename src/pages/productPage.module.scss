@@ -1,0 +1,22 @@
+@import "../media";
+.productContainer {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.cardItemWrapper {
+  display: flex;
+  flex-direction: column;
+  @include respond(tab) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // margin-left: 40px;
+  }
+}
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
