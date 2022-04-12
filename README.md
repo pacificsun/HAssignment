@@ -1,4 +1,4 @@
-# Running app
+# Running the app
 Create .env file and assign REACT_APP_API with api url
 
 In the project directory, you can run:
