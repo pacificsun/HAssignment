@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import { Loader } from "../components/loder";
 import { Button } from "../components/button";
 import { useActions } from "../hooks/useActions";
 import { CardComponent } from "../components/card";
@@ -11,7 +12,7 @@ import styles from "./productPage.module.scss";
 export const ProductPage: React.FC = () => {
   const [productCount, setProductCount] = useState(6);
   const { getProducts } = useActions();
-  const { data } = useTypedSelector((state) => state.productsList);
+  const { data, loading } = useTypedSelector((state) => state.productsList);
 
   useEffect(() => {
     getProducts(productCount);
@@ -38,7 +39,11 @@ export const ProductPage: React.FC = () => {
           ))}
         </div>
         <div className={styles.buttonWrapper}>
-          <Button onClick={showMoreItem} buttonName="Load More" />
+          {loading ? (
+            <Loader />
+          ) : (
+            <Button onClick={showMoreItem} buttonName="Load More" />
+          )}
         </div>
       </div>
     </div>
